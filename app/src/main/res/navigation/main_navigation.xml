@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/usersFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.android.imageshowing.ui.main.UsersFragment"
+        android:label="UsersFragment"
+        tools:layout="@layout/users_fragment">
+
+        <action
+            android:id="@+id/action_usersFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="com.android.imageshowing.ui.main.AlbumsFragment"
+        android:label="AlbumsFragment"
+        tools:layout="@layout/albums_fragment" />
+</navigation>
